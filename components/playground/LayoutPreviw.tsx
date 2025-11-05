@@ -9,7 +9,7 @@ const LayoutPreview = ({ config }: LayoutPreviewProps) => {
   return (
     <div className="w-full bg-gray-50 rounded-lg p-8 border-2 border-gray-300">
       <div
-        className="min-h-[400px] bg-white border-2 border-dashed border-gray-400 rounded"
+        className="min-h-[400px] bg-white border-2 border-dashed border-gray-400 rounded overflow-auto"
         style={{
           display: config.display,
           flexDirection: config.flexDirection,

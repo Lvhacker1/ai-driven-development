@@ -17,12 +17,12 @@ const Controls = ({ config, setConfig }: ControlsProps) => {
         <label className="block text-sm font-medium text-gray-700 mb-2">
           Flex Direction
         </label>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {(['row', 'row-reverse', 'column', 'column-reverse'] as const).map((dir) => (
             <button
               key={dir}
               onClick={() => updateConfig({ flexDirection: dir })}
-              className={`px-4 py-2 rounded border ${
+              className={`px-4 py-2 rounded border text-sm ${
                 config.flexDirection === dir
                   ? 'bg-blue-500 text-white border-blue-500'
                   : 'bg-white text-gray-700 border-gray-300 hover:border-blue-300'
@@ -70,12 +70,12 @@ const Controls = ({ config, setConfig }: ControlsProps) => {
         <label className="block text-sm font-medium text-gray-700 mb-2">
           Flex Wrap
         </label>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
           {(['nowrap', 'wrap', 'wrap-reverse'] as const).map((wrap) => (
             <button
               key={wrap}
               onClick={() => updateConfig({ flexWrap: wrap })}
-              className={`px-4 py-2 rounded border ${
+              className={`px-4 py-2 rounded border text-sm ${
                 config.flexWrap === wrap
                   ? 'bg-blue-500 text-white border-blue-500'
                   : 'bg-white text-gray-700 border-gray-300 hover:border-blue-300'
