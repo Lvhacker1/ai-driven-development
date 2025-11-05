@@ -40,7 +40,7 @@ const Controls = ({ config, setConfig }: ControlsProps) => {
         <select
           value={config.justifyContent}
           onChange={(e) => updateConfig({ justifyContent: e.target.value as any })}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border text-gray-400 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="flex-start">flex-start</option>
           <option value="flex-end">flex-end</option>
@@ -57,7 +57,7 @@ const Controls = ({ config, setConfig }: ControlsProps) => {
         <select
           value={config.alignItems}
           onChange={(e) => updateConfig({ alignItems: e.target.value as any })}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border text-gray-400 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="flex-start">flex-start</option>
           <option value="flex-end">flex-end</option>
@@ -106,14 +106,14 @@ const Controls = ({ config, setConfig }: ControlsProps) => {
         <div className="flex items-center gap-4">
           <button
             onClick={() => updateConfig({ numBoxes: Math.max(1, config.numBoxes - 1) })}
-            className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
+            className="px-4 py-2 bg-gray-200  text-gray-500 rounded hover:bg-gray-300"
           >
             -
           </button>
-          <span className="text-lg font-semibold">{config.numBoxes}</span>
+          <span className="text-lg font-semibold  text-gray-500">{config.numBoxes}</span>
           <button
             onClick={() => updateConfig({ numBoxes: Math.min(10, config.numBoxes + 1) })}
-            className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
+            className="px-4 py-2 bg-gray-200 rounded  text-gray-500 hover:bg-gray-300"
           >
             +
           </button>
@@ -134,7 +134,7 @@ const Controls = ({ config, setConfig }: ControlsProps) => {
             type="text"
             value={config.boxColor}
             onChange={(e) => updateConfig({ boxColor: e.target.value })}
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-md"
+            className="flex-1 px-3 py-2 border border-gray-300 rounded-md  text-gray-400"
           />
         </div>
       </div>
@@ -147,11 +147,11 @@ const Controls = ({ config, setConfig }: ControlsProps) => {
           value={config.boxWidth}
           onChange={(e) => updateConfig({ boxWidth: e.target.value })}
           placeholder="auto, 100px, 50%, etc."
-          className="w-full px-3 py-2 border border-gray-300 rounded-md"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md  text-gray-400"
         />
       </div>
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
+        <label className="block text-sm font-medium text-gray-700 mb-2 ">
           Box Height
         </label>
         <input
@@ -159,7 +159,7 @@ const Controls = ({ config, setConfig }: ControlsProps) => {
           value={config.boxHeight}
           onChange={(e) => updateConfig({ boxHeight: e.target.value })}
           placeholder="auto, 100px, 50%, etc."
-          className="w-full px-3 py-2 border border-gray-300 rounded-md"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md  text-gray-400"
         />
       </div>
     </div>
